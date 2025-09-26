@@ -1,38 +1,355 @@
-.App {
-  text-align: center;
+body {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+header {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 20px 0;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
-.App-link {
-  color: #61dafb;
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.logo h1 {
+    color: #2d3748;
+    margin: 0;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.logo-icon {
+    font-size: 2.5rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #4a5568;
+    font-weight: 500;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background: #667eea;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.hero {
+    text-align: center;
+    padding: 80px 0;
+    color: white;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero p {
+    font-size: 1.3rem;
+    margin-bottom: 40px;
+    opacity: 0.9;
+}
+
+.search-box {
+    /* Reduce max-width slightly to prevent edge-to-edge touch on smaller phones */
+    max-width: 90%; 
+    margin: 0 auto; 
+}
+
+.search-box input {
+    font-size: 1rem;
+    /* Increase right padding to ensure text doesn't hide behind the button */
+    padding: 12px 60px 12px 15px; 
+    /* Ensure the input always takes the full width of the search-box container */
+    width: 100%; 
+    box-sizing: border-box; /* **CRUCIAL FIX**: Includes padding/border in the element's total width */
+}
+
+.search-btn {
+    top: 50%;
+    right: 8px;
+    /* CRUCIAL FIX: Using 'translateY(-50%)' centers it based on its own height. 
+       We often need a small additional offset for pixel-perfect centering 
+       when padding and border are involved. Removing scale animation here 
+       to ensure perfect alignment on click. */
+    transform: translateY(-50%); 
+    padding: 8px 12px; 
+    transition: background 0.3s ease; /* Only transition background */
+}
+
+.articles-section {
+    background: white;
+    padding: 80px 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #2d3748;
+    margin-bottom: 50px;
+}
+
+.articles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.article-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.article-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Updated: Added flex layout to article card for stacked mobile view */
+.article-card {
+    display: flex;
+    flex-direction: column; /* Default: stack image on top of content */
+}
+
+.article-image {
+    height: 200px;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    color: white;
+    /* Added: Ensure image takes full width at the top */
+    width: 100%; 
+}
+
+.article-content {
+    padding: 25px;
+    flex-grow: 1; /* Allows content to take up remaining space */
+}
+
+.article-category {
+    background: #e2e8f0;
+    color: #4a5568;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.article-title {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #2d3748;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.article-excerpt {
+    color: #718096;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.article-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    color: #a0aec0;
+}
+
+.categories {
+    background: #f7fafc;
+    padding: 60px 0;
+}
+
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.category-card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.category-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.category-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #2d3748;
+    margin-bottom: 10px;
+}
+
+.category-count {
+    color: #718096;
+    font-size: 0.9rem;
+}
+
+footer {
+    background: #2d3748;
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.footer-section h3 {
+    margin-bottom: 15px;
+    color: #e2e8f0;
+}
+
+.footer-section p, .footer-section a {
+    color: #a0aec0;
+    text-decoration: none;
+    line-height: 1.6;
+}
+
+.footer-section a:hover {
+    color: white;
+}
+
+/* ---------------------------------------------------------------------- */
+/* MOBILE OPTIMIZATION FIXES                     */
+/* ---------------------------------------------------------------------- */
+
+@media (max-width: 768px) {
+    /* General Mobile Padding */
+    .articles-section, .categories, .hero {
+        padding: 40px 0; /* Reduce vertical padding on mobile */
+    }
+    
+    /* Header & Navigation Fixes */
+    .header-content {
+        flex-direction: column;
+        gap: 15px; /* Reduced gap */
+    }
+
+    .logo {
+        width: 100%;
+        justify-content: center;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px; /* Smaller gap for list items */
+    }
+    
+    nav a {
+        padding: 8px 10px; /* Smaller padding for links */
+        font-size: 0.95rem;
+    }
+
+    /* Hero Section Fixes */
+    .hero h2 {
+        font-size: 2rem; /* Reduced font size */
+    }
+    
+    .hero p {
+        font-size: 1rem;
+        margin-bottom: 25px;
+    }
+    
+    .search-box {
+        max-width: 95%; /* Allows search box to fill more width */
+    }
+    
+    .search-box input {
+        font-size: 1rem;
+        padding: 12px 50px 12px 15px; /* Adjusted padding */
+    }
+
+    /* Article Grid Fixes */
+    .articles-grid {
+        /* This ensures one column on small screens */
+        grid-template-columns: 1fr; 
+    }
+    
+    /* Article Card Layout Fix: Ensures the card scales nicely */
+    .article-card {
+        max-width: 100%;
+        margin: 0;
+    }
+
+    /* Categories Grid Fixes */
+    .categories-grid {
+        /* Adjusted minmax for better scaling on small mobile devices */
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); 
+        gap: 15px;
+    }
+    
+    /* Footer Fixes */
+    .footer-content {
+        /* Ensures footer sections stack vertically */
+        grid-template-columns: 1fr; 
+        text-align: center;
+    }
+    
+    .footer-section {
+        padding: 15px 0; /* Add some spacing between stacked sections */
+    }
 }
