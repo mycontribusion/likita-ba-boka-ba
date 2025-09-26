@@ -1,20 +1,37 @@
 import React from 'react';
 
-const ArticleCard = ({ article, onOpenArticle }) => {
-  return (
-    <div className="article-card" onClick={() => onOpenArticle(article.id)}>
-      <div className="article-image">{article.icon}</div>
-      <div className="article-content">
-        <span className="article-category">{article.category}</span>
-        <h3 className="article-title">{article.title}</h3>
-        <p className="article-excerpt">{article.excerpt}</p>
-        <div className="article-meta">
-          <span>📅 {article.date}</span>
-          <span>👁️ {article.views} masu karanta</span>
+// Safety Fix: Provide a default empty function for onCardClick
+const ArticleCard = ({ article, onCardClick = () => {} }) => { 
+    const { icon, category, title, excerpt, date, views } = article;
+    
+    return (
+        // Plain CSS classes used
+        <div 
+            className="article-card" 
+            onClick={onCardClick}
+        >
+            <div className="article-image">{icon}</div>
+            <div className="article-content">
+                <span className="article-category">
+                    {category}
+                </span>
+                <h3 className="article-title">
+                    {title}
+                </h3>
+                <p className="article-excerpt">
+                    {excerpt}
+                </p>
+                <div className="article-meta">
+                    <span className="meta-item">
+                        <span role="img" aria-label="date">📅</span> {date}
+                    </span>
+                    <span className="meta-item">
+                        <span role="img" aria-label="views">👁️</span> {views} masu karanta
+                    </span>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  );
+    );
 };
 
 export default ArticleCard;

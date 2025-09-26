@@ -1,4 +1,3 @@
-import React from 'react';
 
 // Assuming global CSS import is handled in App.js
 

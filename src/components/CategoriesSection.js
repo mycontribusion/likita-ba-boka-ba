@@ -1,5 +1,5 @@
 
-import React from 'react';
+
 import CategoryCard from './CategoryCard'; // Import the reusable CategoryCard
 
 const CategoriesSection = ({ categories, onFilter }) => {
