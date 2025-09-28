@@ -12,16 +12,29 @@ import Footer from './components/Footer';
 const LikitaBaBokaBa = () => {
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [selectedArticle, setSelectedArticle] = useState(null);
+  const [searchTerm, setSearchTerm] = useState('');
 
-  // Filter articles when a category is selected
-  const filteredArticles = selectedCategory
-    ? articlesData.filter(a => a.category === selectedCategory)
-    : articlesData;
+  const handleSearch = (term) => {
+    setSearchTerm(term.toLowerCase());
+    setSelectedCategory(null);
+    setSelectedArticle(null);
+  };
+
+  // 🟢 FILTER ARTICLES BASED ON CATEGORY OR SEARCH (SAFE VERSION)
+const filteredArticles = articlesData.filter((a) => {
+  const title = a.title ? a.title.toLowerCase() : '';
+  const content = a.content ? a.content.toLowerCase() : '';
+  const matchesCategory = selectedCategory ? a.category === selectedCategory : true;
+  const matchesSearch =
+    title.includes(searchTerm.toLowerCase()) || content.includes(searchTerm.toLowerCase());
+  return matchesCategory && matchesSearch;
+});
+
 
   return (
     <div className="app">
       <Header />
-      <HeroSection />
+      <HeroSection onSearch={handleSearch} />
 
       {!selectedArticle ? (
         <>
