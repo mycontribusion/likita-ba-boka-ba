@@ -11,10 +11,10 @@ const malaria = {
         Zazzabin cizon sauro yana daya daga cikin cututtuka masu haddasa mutuwa a Afrika. Don haka, muhimmanci ne mu koyi yadda za mu kare kanmu.
         
         ### Hanyoyin Kariya
-        1.  **Amfani da Gidan Sauro:** Yi amfani da gidan sauro mai sinadarin kariya (Insecticide-Treated Net) lokacin barci.
-        2.  **Tsaftar Muhalli:** Ka kawar da ruwan da ya taru a kusa da gidanka domin a nan ne sauro ke kiwo.
-        3.  **Fesa Maganin Sauro:** Yin amfani da maganin sauro a cikin gida na iya taimakawa.
-        4.  **Rigakafi na Wucin Gadi:** Ga mata masu juna biyu da yara, akwai maganin rigakafi na lokaci-lokaci (IPT) wanda ya kamata a bi.
+        1.  Amfani da Gidan Sauro: Yi amfani da gidan sauro mai sinadarin kariya (Insecticide-Treated Net) lokacin barci.
+        2.  Tsaftar Muhalli: Ka kawar da ruwan da ya taru a kusa da gidanka domin a nan ne sauro ke kiwo.
+        3.  Fesa Maganin Sauro: Yin amfani da maganin sauro a cikin gida na iya taimakawa.
+        4.  Rigakafi na Wucin Gadi: Ga mata masu juna biyu da yara, akwai maganin rigakafi na lokaci-lokaci (IPT) wanda ya kamata a bi.
     `
 };
 
