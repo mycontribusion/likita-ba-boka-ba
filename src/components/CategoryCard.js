@@ -1,18 +1,14 @@
 import React from 'react';
 
-const CategoryCard = ({ category, onSelectCategory, isSelected }) => {
-  const handleClick = () => {
-    onSelectCategory(category.name);
-  };
-
+const CategoryCard = ({ category, isSelected, onSelectCategory }) => {
   return (
     <div
       className={`category-card ${isSelected ? 'selected' : ''}`}
-      onClick={handleClick}
+      onClick={() => onSelectCategory(category.name)} // pass the name
     >
       <div className="icon">{category.icon}</div>
-      <h3>{category.name}</h3>
-      <p>{category.count} Labarai</p>
+      <div className="category-title">{category.name}</div>
+      <div className="category-count">{category.count} labarai</div>
     </div>
   );
 };

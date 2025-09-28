@@ -1,0 +1,17 @@
+.category-articles {
+    margin-top: 10px;
+    padding-left: 15px;
+  }
+  
+  .category-article-title {
+    cursor: pointer;
+    padding: 6px 0;
+    color: #2d3748;
+    transition: color 0.2s ease;
+  }
+  
+  .category-article-title:hover {
+    color: #667eea;
+    text-decoration: underline;
+  }
+  
