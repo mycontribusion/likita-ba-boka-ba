@@ -1,15 +1,13 @@
-import React from 'react';
+import React from "react";
+import { Link } from "react-router-dom";
 
-const CategoryCard = ({ category, isSelected, onSelectCategory }) => {
+const CategoryCard = ({ category }) => {
   return (
-    <div
-      className={`category-card ${isSelected ? 'selected' : ''}`}
-      onClick={() => onSelectCategory(category.name)} // pass the name
-    >
-      <div className="icon">{category.icon}</div>
-      <div className="category-title">{category.name}</div>
-      <div className="category-count">{category.count} labarai</div>
-    </div>
+    <Link to={`/category/${category.name}`} style={{ textDecoration: "none" }}>
+      <div className="category-card">
+        <div className="category-title">{category.name}</div>
+      </div>
+    </Link>
   );
 };
 

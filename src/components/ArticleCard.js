@@ -1,24 +1,14 @@
-import React from 'react';
+import React from "react";
+import './ArticleCard.css';
 
-const ArticleCard = ({ article, onClick }) => {
+const ArticleCard = ({ article, onClick, showExcerpt = true }) => {
   return (
-    <div className="article-card" onClick={onClick}>
-      {/* Article image area (uses emoji/icon as placeholder) */}
-      <div className="article-image">
-        <span>{article.icon || '📰'}</span>
-      </div>
-
-      {/* Article content */}
-      <div className="article-content">
-        <span className="article-category">{article.category}</span>
-        <h3 className="article-title">{article.title}</h3>
-        <p className="article-excerpt">{(article.content || '').slice(0, 100)}...</p>
-
-        <div className="article-meta">
-          <span>{article.date}</span>
-          <span>👁️ {article.views || 0}</span>
-        </div>
-      </div>
+    <div className="article-card" onClick={onClick} style={{ cursor: "pointer" }}>
+      <div className="icon">{article.icon}</div>
+      <h3>{article.title}</h3>
+      {showExcerpt && (
+        <p>{(article.fullContent || "").slice(0, 120)}...</p>
+      )}
     </div>
   );
 };
