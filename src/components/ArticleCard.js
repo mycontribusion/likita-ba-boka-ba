@@ -1,37 +1,26 @@
 import React from 'react';
 
-// Safety Fix: Provide a default empty function for onCardClick
-const ArticleCard = ({ article, onCardClick = () => {} }) => { 
-    const { icon, category, title, excerpt, date, views } = article;
-    
-    return (
-        // Plain CSS classes used
-        <div 
-            className="article-card" 
-            onClick={onCardClick}
-        >
-            <div className="article-image">{icon}</div>
-            <div className="article-content">
-                <span className="article-category">
-                    {category}
-                </span>
-                <h3 className="article-title">
-                    {title}
-                </h3>
-                <p className="article-excerpt">
-                    {excerpt}
-                </p>
-                <div className="article-meta">
-                    <span className="meta-item">
-                        <span role="img" aria-label="date">📅</span> {date}
-                    </span>
-                    <span className="meta-item">
-                        <span role="img" aria-label="views">👁️</span> {views} masu karanta
-                    </span>
-                </div>
-            </div>
+const ArticleCard = ({ article, onClick }) => {
+  return (
+    <div className="article-card" onClick={onClick}>
+      {/* Article image area (uses emoji/icon as placeholder) */}
+      <div className="article-image">
+        <span>{article.icon || '📰'}</span>
+      </div>
+
+      {/* Article content */}
+      <div className="article-content">
+        <span className="article-category">{article.category}</span>
+        <h3 className="article-title">{article.title}</h3>
+        <p className="article-excerpt">{(article.content || '').slice(0, 100)}...</p>
+
+        <div className="article-meta">
+          <span>{article.date}</span>
+          <span>👁️ {article.views || 0}</span>
         </div>
-    );
+      </div>
+    </div>
+  );
 };
 
 export default ArticleCard;

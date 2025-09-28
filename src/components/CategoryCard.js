@@ -1,14 +1,18 @@
+import React from 'react';
 
+const CategoryCard = ({ category, onSelectCategory, isSelected }) => {
+  const handleClick = () => {
+    onSelectCategory(category.name);
+  };
 
-const CategoryCard = ({ category, onFilter }) => {
   return (
-    <div 
-      className="category-card" 
-      onClick={() => onFilter(category.filterKey)} // Use filterKey for action
+    <div
+      className={`category-card ${isSelected ? 'selected' : ''}`}
+      onClick={handleClick}
     >
-      <div className="category-icon">{category.icon}</div>
-      <h3 className="category-title">{category.title}</h3>
-      <p className="category-count">{category.count} labarai</p>
+      <div className="icon">{category.icon}</div>
+      <h3>{category.name}</h3>
+      <p>{category.count} Labarai</p>
     </div>
   );
 };
