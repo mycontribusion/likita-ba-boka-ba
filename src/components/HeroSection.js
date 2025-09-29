@@ -1,5 +1,6 @@
 
 import React, { useState } from 'react';
+import './HeroSection.css';
 
 const HeroSection = ({ onSearch }) => {
   const [searchInput, setSearchInput] = useState('');

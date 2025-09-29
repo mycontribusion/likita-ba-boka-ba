@@ -1,6 +1,6 @@
-
 import articlesData from './articles';
 
+// Create a mapping of categories to counts and icons
 const categoriesMap = {};
 
 articlesData.forEach(article => {
@@ -15,6 +15,7 @@ articlesData.forEach(article => {
   }
 });
 
+// Convert the map to an array for easier mapping in components
 const categoriesData = Object.values(categoriesMap);
 
 export default categoriesData;
