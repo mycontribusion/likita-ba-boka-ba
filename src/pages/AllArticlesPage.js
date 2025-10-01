@@ -10,12 +10,16 @@ const AllArticlesPage = () => {
 
   return (
     <div className="container">
-      <h2 className="section-title">Dukkan Labarai</h2>
-      <ArticleSection articles={paginatedArticles} />
-      {/* Add simple pagination buttons */}
+
+      {/* Pass showExcerpt={false} to remove the "Sabbin Labarai" heading */}
+      <ArticleSection articles={paginatedArticles} showExcerpt={false} />
+      
+      {/* Pagination */}
       <div style={{ textAlign: "center", margin: "20px 0" }}>
         {page > 1 && <button onClick={() => setPage(page - 1)}>Previous</button>}
-        {page * perPage < articlesData.length && <button onClick={() => setPage(page + 1)}>Next</button>}
+        {page * perPage < articlesData.length && (
+          <button onClick={() => setPage(page + 1)}>Next</button>
+        )}
       </div>
     </div>
   );

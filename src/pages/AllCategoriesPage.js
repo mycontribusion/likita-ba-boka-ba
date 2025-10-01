@@ -6,7 +6,6 @@ import categoriesData from "../data/categories";
 const AllCategoriesPage = () => {
   return (
     <div className="container">
-      <h2 className="section-title">Rukunai</h2>
       <CategorySection categories={categoriesData} />
     </div>
   );
