@@ -8,6 +8,8 @@ import ArticleSection from "./components/ArticleSection";
 import ArticlePage from "./pages/ArticlePage";
 import AllArticlesPage from "./pages/AllArticlesPage";
 import AllCategoriesPage from "./pages/AllCategoriesPage";
+import AboutPage from "./pages/AboutPage";
+
 
 const LikitaBaBokaBa = () => {
   return (
@@ -22,6 +24,8 @@ const LikitaBaBokaBa = () => {
           <Route path="/categories" element={<AllCategoriesPage />} />
           <Route path="/category/:name" element={<CategoryPage />} />
           <Route path="/article/:id" element={<ArticlePage />} />
+          <Route path="/about" element={<AboutPage />} />
+
           {/* Optional 404 fallback */}
           <Route path="*" element={<h2 style={{ textAlign: "center" }}>Shafin bai samu ba 😅</h2>} />
         </Routes>

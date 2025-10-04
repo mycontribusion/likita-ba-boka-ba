@@ -30,7 +30,7 @@ const Header = () => {
 
               {/* About section */}
               <li>
-                <a href="#about">Game da mu</a>
+                <Link to="/about">Game da Mu</Link>
               </li>
 
               {/* Contact section */}
