@@ -15,29 +15,86 @@ const HomePage = ({ onSelectArticle }) => {
     setSelectedCategory(null);
   };
 
-  const filteredArticles = articlesData.filter(a => {
+  // 🟡 Highlight matched text in titles/excerpts
+  const highlightMatch = (text, term) => {
+    if (!term || !text) return text;
+    const regex = new RegExp(`(${term})`, "gi");
+    return text.replace(regex, "<mark>$1</mark>");
+  };
+
+  // 🟢 Filter articles based on search or category
+  const filteredArticles = articlesData.filter((a) => {
     const title = a.title ? a.title.toLowerCase() : "";
     const content = a.content ? a.content.toLowerCase() : "";
-    return title.includes(searchTerm) || content.includes(searchTerm);
+    const category = a.category ? a.category.toLowerCase() : "";
+    return (
+      title.includes(searchTerm) ||
+      content.includes(searchTerm) ||
+      category.includes(searchTerm)
+    );
   });
+
+  // 🟢 If category selected, filter by it
+  const categoryArticles = selectedCategory
+    ? articlesData.filter((a) => a.category === selectedCategory)
+    : [];
 
   return (
     <div>
       <HeroSection onSearch={handleSearch} />
 
-      {searchTerm === "" ? (
-  <ArticleSection
-    articles={articlesData.slice(0, 5)} // recent 5
-    onSelectArticle={onSelectArticle}
-  />
-) : (
-  <ArticleSection
-    articles={filteredArticles}
-    onSelectArticle={onSelectArticle}
-  />
-)}
+      {/* Show normal homepage when nothing searched */}
+      {!selectedCategory && searchTerm === "" && (
+        <ArticleSection
+          articles={articlesData.slice(0, 5)} // 5 recent articles
+          onSelectArticle={onSelectArticle}
+        />
+      )}
 
+      {/* Show category results */}
+      {selectedCategory && (
+        <ArticleSection
+          articles={categoryArticles.map((article) => ({
+            ...article,
+            highlightedTitle: highlightMatch(article.title, searchTerm),
+            highlightedExcerpt: highlightMatch(
+              article.content?.slice(0, 120) + "...",
+              searchTerm
+            ),
+          }))}
+          onSelectArticle={onSelectArticle}
+        />
+      )}
 
+      {/* Show search results */}
+      {!selectedCategory && searchTerm !== "" && (
+        <>
+        {/* Show search results 
+          <h2 style={{ textAlign: "center", margin: "30px 0", fontSize:"0.7em", color:"white" }}>
+            Sakamakon bincike: “{searchTerm}”
+          </h2>*/}
+          {filteredArticles.length > 0 ? (
+            <ArticleSection
+              articles={filteredArticles.map((article) => ({
+                ...article,
+                highlightedTitle: highlightMatch(article.title, searchTerm),
+                highlightedExcerpt: highlightMatch(
+                  article.content?.slice(0, 120) + "...",
+                  searchTerm
+                ),
+              }))}
+              onSelectArticle={onSelectArticle}
+              showExcerpt={true}
+            />
+          ) : (
+            <p style={{ textAlign: "center", marginTop: "20px" }}>
+              Ba a sami sakamako ba.
+            </p>
+          )}
+        </>
+      )}
+
+      {/* Always show categories */}
       <CategorySection
         categories={categoriesData}
         selectedCategory={selectedCategory}
