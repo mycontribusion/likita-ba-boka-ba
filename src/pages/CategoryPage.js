@@ -7,7 +7,26 @@ const CategoryPage = () => {
   const { name } = useParams();
   const navigate = useNavigate();
 
-  const filteredArticles = articlesData.filter(a => a.category === name);
+  const filteredArticles = articlesData.filter(article => {
+    const category = article.category;
+
+    // If category is an array (e.g. ["Cututtuka", "Ruwa"])
+    if (Array.isArray(category)) {
+      return category.some(
+        c => c.toLowerCase() === name.toLowerCase()
+      );
+    }
+
+    // If category is a string (possibly comma-separated)
+    if (typeof category === "string") {
+      return category
+        .split(",")
+        .map(c => c.trim().toLowerCase())
+        .includes(name.toLowerCase());
+    }
+
+    return false;
+  });
 
   const handleSelectArticle = (article) => {
     navigate(`/article/${article.id}`);
@@ -16,11 +35,19 @@ const CategoryPage = () => {
   return (
     <div className="container">
       <h2 className="section-title">{name}</h2>
+
       <ArticleSection
         articles={filteredArticles}
         onSelectArticle={handleSelectArticle}
-        showExcerpt={false} // only show titles
+        showExcerpt={false}
       />
+
+      {filteredArticles.length === 0 && (
+        <p style={{ textAlign: "center", marginTop: "1rem", color: "#666" }}>
+          Babu labarai a wannan rukuni tukuna.
+        </p>
+      )}
+      <h2></h2>
     </div>
   );
 };

@@ -17,13 +17,19 @@ const HomePage = ({ onSelectArticle }) => {
   const filteredArticles = articlesData.filter(a => {
     const title = (a.title || "").toLowerCase();
     const content = (a.fullContent || "").toLowerCase();
-    const category = (a.category || "").toLowerCase();
+  
+    // Handle category whether it's a string or array
+    const categoryText = Array.isArray(a.category)
+      ? a.category.join(" ").toLowerCase()
+      : (a.category || "").toLowerCase();
+  
     return (
       title.includes(searchTerm) ||
       content.includes(searchTerm) ||
-      category.includes(searchTerm)
+      categoryText.includes(searchTerm)
     );
   });
+  
 
   return (
     <div>
