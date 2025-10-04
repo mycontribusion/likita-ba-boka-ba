@@ -13,21 +13,21 @@ const exercise = {
   
   ### Menene Ciwo?
 
-  Ciwo wani abune da ake ji ajiki wanda me ji baya son sa.
+  Ciwo wani abune da ake ji a jiki, wanda mai ji baya son sa.
 
-  A lokaci guda, ciwa wata baiwa ce da Allah Yasa a jikin dabbobi, cikinsu harda mutane, don su ankare idan wani abu na cutar da jikinsu.
+  A lokaci guda, ciwo wata baiwa ce da Allah Ya sa a jikin dabbobi, cikinsu har da mutane, don su an kare idan wani abu na cutar da jikinsu.
   
   ### Menene Ciwon Ciki?
   
-  Ciwone wanda ze iya samuwa idan wani abu na cutarda daya daga cikin sassan jiki dake tsakanin kirji da mara, fata, tsoka, kashi, 'ya-'yan hanji, koda, hanta, dss.
+  Ciwo ne wanda zai iya samuwa idan wani abu na cutar da daya daga cikin sassan jiki da ke tsakanin kirji da mara - fata, tsoka, kashi, 'ya-'yan hanji, koda, hanta, dss.
 
   Kasantuwar sabubban suna da yawa, shiyasa likitoci ke yin tambayoyi, su dan tattaba cikin, su dan bubbuge shi, harma suyi amfani da amsa-kuwwa(stethoscope) da gwaje-gwaje.
 
-  Duk waennan anayi ne don a gano sababin wannan ciwon cikin.
+  Duk waennan ana yi ne don a gano sababin wannan ciwon cikin.
 
-  ###Atakaice:
-  Ciwon ciki ba abu daya bane. A likitance akwai cututtuka sama da dari da zasu iya sa ciwon ciki.
-  Allah Ya karama lafiya. Ameen 
+  ###A takaice:
+  Ciwon ciki ba abu daya ba ne. A likitance akwai cututtuka sama da dari da za su iya sa ciwon ciki.
+  Allah Ya kara mana lafiya. Ameen 
 
   `
   };

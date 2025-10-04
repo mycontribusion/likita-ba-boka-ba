@@ -12,13 +12,13 @@ const firstAidBasics = {
   Da sunan Allah nake fawara.
   
   ### Likita:
-  Likita shine mutum wanda ya karanci likitanci.
+  Likita shi ne mutum wanda ya karanci ilimin likitanci.
 
-  Likita shine wanda ya karanci jikin dan Adam:
+  Likita shi ne wanda ya karanci jikin dan Adam:
   1: yanayinta a cikin lafiya.
-  2: yanayinta acikin rashin lafiya.
-  3: yanda take bayyanar da rashin lafiya.
-  4: yanda cututtuka ke canza yanayinta.
+  2: yanayinta a cikin rashin lafiya.
+  3: yadda take bayyanar da rashin lafiya.
+  4: yadda cututtuka ke canza yanayinta.
   5: hanyoyin dawo da ita cikin lafiyanta.
 
   ###Kayan Aikin Likita:
@@ -27,12 +27,12 @@ const firstAidBasics = {
   3: taba jikin
   4: bubbuga jikin
   5: sauraron jiki
-  5: mommotsa jikin
-  6: aune-aune
+  6: mommotsa jikin
+  7: aune-aune
 
-  ###Atakaice:
-  Likita ba boka bane, bai san gaibu ba. se ya tambaya, se ya kalla, ya taba, ya buga, se ya saurara, se yayi aune-aune, gwargwadan irin rashin lafiyar, kafin ya gano wacce cuta ce.
-  Allah Ya karama lafiya. Ameen 
+  ###A takaice:
+  Likita ba boka ba ne, bai san gaibu ba. sai ya tambaya, sai ya kalla, ya taba, ya buga, sai ya saurara, sai yayi aune-aune, gwargwadon irin rashin lafiyar, kafin ya gano wacce cuta ce.
+  Allah Ya kara mana lafiya. Ameen 
   `
   };
   
