@@ -10,7 +10,7 @@ const AllArticlesPage = () => {
 
   return (
     <div className="container">
-
+      <h2 className="section-title"></h2>
       {/* Pass showExcerpt={false} to remove the "Sabbin Labarai" heading */}
       <ArticleSection articles={paginatedArticles} showExcerpt={false} />
       
