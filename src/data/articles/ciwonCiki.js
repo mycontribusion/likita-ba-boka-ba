@@ -1,6 +1,6 @@
 
 const exercise = {
-    id: "stomachache",
+    id: "ciwonCiki",
     icon: "🏃",
     category: "Ciwo",
     title: "Nau-ukan Ciwon Ciki",
