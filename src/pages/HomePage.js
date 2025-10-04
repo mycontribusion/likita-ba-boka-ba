@@ -31,9 +31,10 @@ const HomePage = ({ onSelectArticle }) => {
 
       {searchTerm ? (
         <div className="search-results container">
-          <h3>
+          {/*
+          <h3 align="center"  style={{ fontSize:"0.7em", color:"white", fontWeight:"lighter"}}>
             Sakamakon Bincike: “{searchTerm}”
-          </h3>
+          </h3>*/}
 
           {filteredArticles.length > 0 ? (
             <ArticleSection
