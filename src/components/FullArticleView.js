@@ -12,12 +12,12 @@ const FullArticleView = ({ article, onBack, onNavigate, hasNext, hasPrev }) => {
 
   return (
     <div className="full-article-container">
-      {/* Back Button */}
+      {/* Back Button 
       <div className="article-header-wrapper">
         <button className="back-button" onClick={onBack}>
           ← Komawa
         </button>
-      </div>
+      </div>*/}
 
       {/* Title */}
       <h2 className="article-full-title">{article.title}</h2>
