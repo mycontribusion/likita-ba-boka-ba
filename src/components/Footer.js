@@ -7,8 +7,8 @@ const Footer = () => {
         <div className="footer-content">
           
           <div className="footer-section">
-            <h3>Game da mu</h3>
-            <p>Muna ba da ilimin kiwon lafiya da Hausa don taimakawa al'umma su sami ilimi mai amfani game da lafiya.</p>
+            <h3>Manufa:</h3>
+            <p>Samar da bayanai dasuka shafi lafiya, likitanci da kuma asibiti a yaren Hausa.</p>
           </div>
           
           <div className="footer-section">
@@ -22,12 +22,11 @@ const Footer = () => {
             {/* Using a fragment (<>) or <div> to wrap the list of links */}
             <div>
               <p><a href="https://www.linkedin.com/in/ahmad-m-musa-b93587156/">Linkedin</a></p>
-              <p><a href="#">Twitter</a></p>
             </div>
           </div>
           
         </div>
-        <p>&copy; 2024 Likita-ba-boka-ba.</p>
+        <p>&copy; 2025 Likita-ba-boka-ba.</p>
       </div>
     </footer>
   );

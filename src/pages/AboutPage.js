@@ -5,7 +5,7 @@ const AboutPage = () => {
   return (
     <div className="about-container">
       <h1 className="about-title">Game da Likita Ba Boka Ba</h1>
-      <p className="about-subtitle">🏥 Ilimin Lafiya a Harshen Hausa</p>
+      <p className="about-subtitle">🏥 Tataccen Ilimin Lafiya daga Likita </p>
 
       <hr className="about-divider" />
 
