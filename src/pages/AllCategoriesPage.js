@@ -8,6 +8,7 @@ const AllCategoriesPage = () => {
     <div className="container">
       <h2 className="section-title"></h2>
       <CategorySection categories={categoriesData} />
+      <h2></h2>
     </div>
   );
 };
