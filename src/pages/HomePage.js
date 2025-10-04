@@ -25,12 +25,18 @@ const HomePage = ({ onSelectArticle }) => {
     <div>
       <HeroSection onSearch={handleSearch} />
 
-      {!selectedCategory && searchTerm === "" && (
-        <ArticleSection
-          articles={filteredArticles.slice(0, 5)} // recent 5 articles
-          onSelectArticle={onSelectArticle}
-        />
-      )}
+      {searchTerm === "" ? (
+  <ArticleSection
+    articles={articlesData.slice(0, 5)} // recent 5
+    onSelectArticle={onSelectArticle}
+  />
+) : (
+  <ArticleSection
+    articles={filteredArticles}
+    onSelectArticle={onSelectArticle}
+  />
+)}
+
 
       <CategorySection
         categories={categoriesData}

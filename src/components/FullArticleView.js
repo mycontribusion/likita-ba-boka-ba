@@ -1,10 +1,10 @@
 import React from 'react';
 import './FullArticleView.css';
 
-const FullArticleView = ({ article, onBack }) => {
+const FullArticleView = ({ article, onBack, onNavigate, hasNext, hasPrev }) => {
   if (!article) return null;
 
-  // Split content into paragraphs (for better formatting)
+  // Split content for better formatting
   const paragraphs = article.fullContent
     ?.trim()
     .split('\n')
@@ -22,7 +22,7 @@ const FullArticleView = ({ article, onBack }) => {
       {/* Title */}
       <h2 className="article-full-title">{article.title}</h2>
 
-      {/* Meta Info (optional) */}
+      {/* Meta Info */}
       <div className="article-meta-full">
         <span>{article.category}</span>
         <span>{article.date}</span>
@@ -34,7 +34,6 @@ const FullArticleView = ({ article, onBack }) => {
       {/* Content */}
       <div className="article-body">
         {paragraphs.map((para, index) => {
-          // Detect Markdown-like subheadings (###)
           if (para.trim().startsWith('###')) {
             return (
               <h3 key={index} className="article-subheading">
@@ -43,7 +42,6 @@ const FullArticleView = ({ article, onBack }) => {
             );
           }
 
-          // Detect lists (start with "- " or "* ")
           if (para.trim().startsWith('-') || para.trim().startsWith('*')) {
             return (
               <p key={index} className="article-list-item">
@@ -52,13 +50,32 @@ const FullArticleView = ({ article, onBack }) => {
             );
           }
 
-          // Normal paragraph
           return (
             <p key={index} className="article-paragraph">
               {para}
             </p>
           );
         })}
+      </div>
+
+      {/* Navigation Buttons */}
+      <div className="article-navigation">
+        {hasPrev && (
+          <button
+            className="nav-btn prev-btn"
+            onClick={() => onNavigate('prev')}
+          >
+            ← Labari Na Baya
+          </button>
+        )}
+        {hasNext && (
+          <button
+            className="nav-btn next-btn"
+            onClick={() => onNavigate('next')}
+          >
+            Labari Na Gaba →
+          </button>
+        )}
       </div>
     </div>
   );
