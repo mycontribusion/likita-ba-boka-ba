@@ -11,8 +11,8 @@ const AllArticlesPage = () => {
   return (
     <div className="container">
       <h2 className="section-title">Duk Labarai</h2>
-      {/* Pass showExcerpt={false} to remove the "Sabbin Labarai" heading */}
-      <ArticleSection articles={paginatedArticles} showExcerpt={false} />
+      {/* Pass showTitle={false} to remove the internal "Sabbin Labarai" heading */}
+      <ArticleSection articles={paginatedArticles} showExcerpt={false} showTitle={false} />
 
       {/* Pagination */}
       <div style={{ textAlign: "center", margin: "20px 0" }}>

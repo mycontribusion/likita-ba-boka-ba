@@ -18,7 +18,7 @@ const LikitaBaBokaBa = () => {
       <div className="app">
         <Header />
 
-        <main style={{ minHeight: "70vh", paddingBottom: "80px" }}>
+        <main className="main-content">
           <Routes>
             {/* ✅ Use index route for homepage */}
             <Route path="/*" element={<HomePage />} />

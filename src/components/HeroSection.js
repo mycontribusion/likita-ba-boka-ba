@@ -21,7 +21,7 @@ const HeroSection = ({ onSearch }) => {
         <div className="hero-content">
           <h4>Shafin Koyarwa Na Musamman</h4>
           <h2>LIKITA BA BOKA BA</h2>
-          <p>Hanyar ka ta samun sahihin ilimin kiwon lafiya cikin harshen Hausa, domin kanka da iyalanka.</p>
+          <p style={{ color: "#cfc7c7ff", fontStyle: "italic" }}>Hanyar samun sahihin ilimin kiwon lafiya cikin harshen Hausa.</p>
 
           <div className="search-box">
             <input

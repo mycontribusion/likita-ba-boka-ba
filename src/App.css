@@ -59,6 +59,17 @@ body {
     padding: 0 20px;
 }
 
+.main-content {
+    min-height: 70vh;
+}
+
+/* Ensure nothing is hidden behind fixed bottom nav on mobile */
+@media (max-width: 768px) {
+    .app {
+        padding-bottom: 80px;
+    }
+}
+
 header {
     background: var(--header-bg);
     border-bottom: 1px solid var(--bg-tertiary);
