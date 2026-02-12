@@ -9,20 +9,14 @@ const Header = () => {
     <header>
       <div className="container">
         <div className="header-content">
-          <Link to="/" className="logo">
-            <img src="/favicon.ico" alt="Likita Ba Boka Ba Logo" />
-            <h1>Likita Ba Boka Ba</h1>
-          </Link>
+          <div className="header-brand-group">
+            <Link to="/" className="logo-img-link">
+              <img src="/favicon.ico" alt="Likita Ba Boka Ba Logo" />
+            </Link>
 
-          <div className="header-right">
-            <nav className="main-nav mobile-nav-hidden">
-              <ul>
-                <li><Link to="/">Gida</Link></li>
-                <li><Link to="/articles">Labarai</Link></li>
-                <li><Link to="/categories">Rukunai</Link></li>
-                <li><Link to="/about">Game da Mu</Link></li>
-              </ul>
-            </nav>
+            <Link to="/" className="logo-text-link">
+              <h1>Likita Ba Boka Ba</h1>
+            </Link>
 
             <button
               className="theme-toggle"
@@ -33,6 +27,15 @@ const Header = () => {
               {isDarkMode ? '☀️' : '🌙'}
             </button>
           </div>
+
+          <nav className="main-nav desktop-nav mobile-nav-hidden">
+            <ul>
+              <li><Link to="/">Gida</Link></li>
+              <li><Link to="/articles">Labarai</Link></li>
+              <li><Link to="/categories">Rukunai</Link></li>
+              <li><Link to="/about">Game da Mu</Link></li>
+            </ul>
+          </nav>
         </div>
       </div>
     </header>

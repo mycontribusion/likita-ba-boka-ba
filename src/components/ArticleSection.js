@@ -19,7 +19,7 @@ const ArticleSection = ({ articles, showExcerpt = true, showTitle = true }) => {
 
   return (
     <section className="article-section">
-      {showTitle && <h2>{showExcerpt ? "Sabbin Labarai" : "Labarai"}</h2>}
+      {showTitle && <h2 className="section-title">{showExcerpt ? "Sabbin Labarai" : "Labarai"}</h2>}
 
       <div className="filter-bar">
         <button
