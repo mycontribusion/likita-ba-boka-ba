@@ -1,14 +1,14 @@
 
 const exercise = {
-    id: "ciwonCiki",
-    icon: "🏃",
-    category: "Ciwo",
-    title: "Nau-ukan Ciwon Ciki",
-    excerpt:
-      "Ciwon ciki nau-i-nau-i ne, kuma kowanne akwai abinda ya ke alamtawa",
-    date: "Yau",
-    views: 320,
-    fullContent: `
+  id: "ciwonCiki",
+  icon: "🏃",
+  category: "Ciwo",
+  title: "Nau-ukan Ciwon Ciki",
+  excerpt:
+    "Ciwon ciki nau-i-nau-i ne, kuma kowanne akwai abinda ya ke alamtawa",
+  date: "2026-02-12",
+  views: 320,
+  fullContent: `
   Da sunan Allah nake fawara.
   
   ### Menene Ciwo?
@@ -30,7 +30,6 @@ const exercise = {
   Allah Ya kara mana lafiya. Ameen 
 
   `
-  };
-  
-  export default exercise;
-  
+};
+
+export default exercise;

@@ -5,7 +5,7 @@ const malaria = {
     category: 'Cututtuka',
     title: 'Yadda za a kare kansa daga Zazzabin Cizon Sauro',
     excerpt: 'Koyi yadda za ka kare kanka da iyalinka daga zazzabin cizon sauro ta hanyar amfani da rigakafi da kuma tsaftar muhalli.',
-    date: 'Jiya',
+    date: '2026-02-11',
     views: 245,
     fullContent: `
         Zazzabin cizon sauro yana daya daga cikin cututtuka masu haddasa mutuwa a Afrika. Don haka, muhimmanci ne mu koyi yadda za mu kare kanmu.

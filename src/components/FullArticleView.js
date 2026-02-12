@@ -24,9 +24,22 @@ const FullArticleView = ({ article, onBack, onNavigate, hasNext, hasPrev }) => {
 
       {/* Meta Info */}
       <div className="article-meta-full">
-        <span>{article.category}</span>
-        <span>{article.date}</span>
-        <span>{article.views} karatu</span>
+        <span className="full-view-cat-badge">{article.category}</span>
+        {article.date && (
+          <span className="article-date">
+            📅 {new Date(article.date).toLocaleDateString('ha-NG', {
+              year: 'numeric',
+              month: 'long',
+              day: 'numeric'
+            }) === 'Invalid Date'
+              ? article.date
+              : new Date(article.date).toLocaleDateString('en-GB', {
+                day: 'numeric',
+                month: 'long',
+                year: 'numeric'
+              })}
+          </span>
+        )}
       </div>
 
       <hr className="article-divider" />

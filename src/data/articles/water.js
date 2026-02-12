@@ -1,14 +1,14 @@
 
 const water = {
-    id: "water",
-    icon: "💧",
-    category: "Ruwa",
-    title: "Muhimmancin Shan Ruwa a Kullum",
-    excerpt:
-      "Ruwa na da matukar muhimmanci ga lafiyar jiki, musamman wajen taimakawa da narkewar abinci da fitar da gubobi.",
-    date: "Jiya",
-    views: 260,
-    fullContent: `
+  id: "water",
+  icon: "💧",
+  category: "Ruwa",
+  title: "Muhimmancin Shan Ruwa a Kullum",
+  excerpt:
+    "Ruwa na da matukar muhimmanci ga lafiyar jiki, musamman wajen taimakawa da narkewar abinci da fitar da gubobi.",
+  date: "2026-02-11",
+  views: 260,
+  fullContent: `
   Ruwa na da muhimmanci ga dukkan tsarin jiki.
   
   ### Dalilan Shan Ruwa
@@ -19,7 +19,6 @@ const water = {
   
   Ka tabbata kana shan ruwa mai yawa a rana — akalla kofuna takwas.
   `
-  };
-  
-  export default water;
-  
+};
+
+export default water;

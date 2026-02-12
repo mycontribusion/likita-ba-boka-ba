@@ -1,14 +1,14 @@
 
 const stressManagement = {
-    id: "stressManagement",
-    icon: "🧘",
-    category: "Lafiyar Hankali",
-    title: "Yadda Ake Rage Damuwa da Kulawa da Hankali",
-    excerpt:
-      "Rage damuwa yana taimaka wa kwakwalwa ta huta da kuma kiyaye lafiyar zuciya.",
-    date: "Yau da safe",
-    views: 340,
-    fullContent: `
+  id: "stressManagement",
+  icon: "🧘",
+  category: "Lafiyar Hankali",
+  title: "Yadda Ake Rage Damuwa da Kulawa da Hankali",
+  excerpt:
+    "Rage damuwa yana taimaka wa kwakwalwa ta huta da kuma kiyaye lafiyar zuciya.",
+  date: "2026-02-12",
+  views: 340,
+  fullContent: `
   Damuwa abu ne da kowa ke fuskanta a rayuwa, amma idan ba a sarrafa shi ba, yana iya jawo matsaloli na jiki da hankali.
   
   ### Hanyoyin Rage Damuwa
@@ -21,7 +21,6 @@ const stressManagement = {
   
   Natsuwa tana kawo lafiya. Ka yi kokarin rage damuwa domin samun kwanciyar hankali da nutsuwa.
   `
-  };
-  
-  export default stressManagement;
-  
+};
+
+export default stressManagement;

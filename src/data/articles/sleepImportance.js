@@ -1,14 +1,14 @@
 
 const sleepImportance = {
-    id: "sleepImportance",
-    icon: "🛌",
-    category: "Lafiya Gabaɗaya",
-    title: "Muhimmancin Barci Mai Isasshe",
-    excerpt:
-      "Barci mai isasshe yana taimakawa jiki da kwakwalwa su huta, kuma yana inganta lafiyar zuciya da tunani.",
-    date: "Jiya",
-    views: 230,
-    fullContent: `
+  id: "sleepImportance",
+  icon: "🛌",
+  category: "Lafiya Gabaɗaya",
+  title: "Muhimmancin Barci Mai Isasshe",
+  excerpt:
+    "Barci mai isasshe yana taimakawa jiki da kwakwalwa su huta, kuma yana inganta lafiyar zuciya da tunani.",
+  date: "2026-02-11",
+  views: 230,
+  fullContent: `
   Barci yana daya daga cikin abubuwan da jiki ke bukata domin ya farfado.
   
   ### Amfanin Barci
@@ -19,7 +19,6 @@ const sleepImportance = {
   
   Ka tabbata kana samun awanni 7 zuwa 8 na barci a kowace rana.
   `
-  };
-  
-  export default sleepImportance;
-  
+};
+
+export default sleepImportance;

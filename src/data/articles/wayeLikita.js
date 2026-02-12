@@ -1,14 +1,14 @@
 
 const firstAidBasics = {
-    id: "wayeLikita",
-    icon: "🩹",
-    category: "Asibiti",
-    title: "Waye Likita?",
-    excerpt:
-      "Sanin yadda ake taimakon gaggawa na iya ceton rai kafin a kai mutum asibiti.",
-    date: "Jiya da yamma",
-    views: 270,
-    fullContent: `
+  id: "wayeLikita",
+  icon: "🩹",
+  category: "Asibiti",
+  title: "Waye Likita?",
+  excerpt:
+    "Sanin yadda ake taimakon gaggawa na iya ceton rai kafin a kai mutum asibiti.",
+  date: "2026-02-11",
+  views: 270,
+  fullContent: `
   Da sunan Allah nake fawara.
   
   ### Likita:
@@ -34,7 +34,6 @@ const firstAidBasics = {
   Likita ba boka ba ne, bai san gaibu ba. sai ya tambaya, sai ya kalla, ya taba, ya buga, sai ya saurara, sai yayi aune-aune, gwargwadon irin rashin lafiyar, kafin ya gano wacce cuta ce.
   Allah Ya kara mana lafiya. Ameen 
   `
-  };
-  
-  export default firstAidBasics;
-  
+};
+
+export default firstAidBasics;

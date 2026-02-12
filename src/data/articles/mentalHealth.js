@@ -1,14 +1,14 @@
 
 const mentalHealth = {
-    id: "mentalHealth",
-    icon: "🧠",
-    category: "Lafiyar Hankali",
-    title: "Kula da Lafiyar Hankali",
-    excerpt:
-      "Lafiyar hankali tana da muhimmanci kamar lafiyar jiki, domin tana shafar yadda mutum ke tunani da rayuwa.",
-    date: "Kwanan nan",
-    views: 178,
-    fullContent: `
+  id: "mentalHealth",
+  icon: "🧠",
+  category: "Lafiyar Hankali",
+  title: "Kula da Lafiyar Hankali",
+  excerpt:
+    "Lafiyar hankali tana da muhimmanci kamar lafiyar jiki, domin tana shafar yadda mutum ke tunani da rayuwa.",
+  date: "2026-02-09",
+  views: 178,
+  fullContent: `
   Lafiyar hankali tana nufin yadda mutum ke jin kansa, yadda yake hulda da wasu, da yadda yake magance matsaloli.
   
   ### Hanyoyin Kula da Lafiyar Hankali
@@ -20,7 +20,6 @@ const mentalHealth = {
   
   Ka kula da hankalinka kamar yadda kake kula da jikinka.
   `
-  };
-  
-  export default mentalHealth;
-  
+};
+
+export default mentalHealth;
