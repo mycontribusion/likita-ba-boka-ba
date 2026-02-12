@@ -10,10 +10,10 @@ const AllArticlesPage = () => {
 
   return (
     <div className="container">
-      <h2 className="section-title"></h2>
+      <h2 className="section-title">Duk Labarai</h2>
       {/* Pass showExcerpt={false} to remove the "Sabbin Labarai" heading */}
       <ArticleSection articles={paginatedArticles} showExcerpt={false} />
-      
+
       {/* Pagination */}
       <div style={{ textAlign: "center", margin: "20px 0" }}>
         {page > 1 && <button onClick={() => setPage(page - 1)}>Previous</button>}

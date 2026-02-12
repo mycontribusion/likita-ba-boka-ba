@@ -47,7 +47,7 @@ const CategoryPage = () => {
           Babu labarai a wannan rukuni tukuna.
         </p>
       )}
-      <h2></h2>
+
     </div>
   );
 };

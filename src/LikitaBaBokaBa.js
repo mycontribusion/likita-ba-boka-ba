@@ -4,7 +4,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import HomePage from "./pages/HomePage";
 import CategoryPage from "./pages/CategoryPage";
-import ArticleSection from "./components/ArticleSection";
+
 import ArticlePage from "./pages/ArticlePage";
 import AllArticlesPage from "./pages/AllArticlesPage";
 import AllCategoriesPage from "./pages/AllCategoriesPage";
