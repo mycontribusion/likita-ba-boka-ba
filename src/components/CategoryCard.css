@@ -1,7 +1,7 @@
 .category-card {
-  background: white;
+  background: var(--card-bg);
   border-radius: 15px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  box-shadow: var(--shadow);
   padding: 25px;
   text-align: center;
   transition: all 0.3s ease;
@@ -20,14 +20,14 @@
 .category-title {
   font-size: 1.3rem;
   font-weight: 600;
-  color: #2d3748;
+  color: var(--text-primary);
   margin-bottom: 6px;
 }
 
 .category-count {
   font-size: 0.95rem;
-  color: #718096;
-  background: #edf2f7;
+  color: var(--text-secondary);
+  background: var(--bg-tertiary);
   display: inline-block;
   padding: 6px 12px;
   border-radius: 10px;

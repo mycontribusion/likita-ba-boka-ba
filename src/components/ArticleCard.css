@@ -3,108 +3,108 @@
 /* ---------------------------------------------------------------------- */
 
 .article-card {
-    background: white;
-    border-radius: 20px;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-    padding: 25px 30px;
-    transition: all 0.3s ease;
-    text-align: left;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    animation: fadeIn 0.4s ease-in-out;
+  background: var(--card-bg);
+  border-radius: 20px;
+  box-shadow: var(--shadow);
+  padding: 25px 30px;
+  transition: all 0.3s ease;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.article-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+/* ---------------------------------------------------------------------- */
+/* ICON + TITLE */
+/* ---------------------------------------------------------------------- */
+
+.article-card .icon {
+  font-size: 2rem;
+  color: var(--accent-primary);
+  background: var(--bg-tertiary);
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.article-card h3 {
+  color: var(--text-primary);
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+/* ---------------------------------------------------------------------- */
+/* EXCERPT */
+/* ---------------------------------------------------------------------- */
+
+.article-card p {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
+  flex-grow: 1;
+}
+
+/* Optional subtle divider under title */
+.article-card h3::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: var(--divider);
+  border-radius: 2px;
+  margin-top: 8px;
+}
+
+/* ---------------------------------------------------------------------- */
+/* ANIMATION */
+/* ---------------------------------------------------------------------- */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
   }
-  
-  .article-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  /* ---------------------------------------------------------------------- */
-  /* ICON + TITLE */
-  /* ---------------------------------------------------------------------- */
-  
-  .article-card .icon {
-    font-size: 2.5rem;
-    color: #667eea;
-    background: #edf2f7;
-    width: 60px;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+}
+
+/* ---------------------------------------------------------------------- */
+/* RESPONSIVE DESIGN */
+/* ---------------------------------------------------------------------- */
+
+@media (max-width: 768px) {
+  .article-card {
+    padding: 20px;
     border-radius: 15px;
-    margin-bottom: 15px;
   }
-  
-  .article-card h3 {
-    color: #2d3748;
-    font-size: 1.4rem;
-    font-weight: 700;
-    margin-bottom: 10px;
-    line-height: 1.4;
-  }
-  
-  /* ---------------------------------------------------------------------- */
-  /* EXCERPT */
-  /* ---------------------------------------------------------------------- */
-  
-  .article-card p {
-    color: #4a5568;
-    font-size: 1rem;
-    line-height: 1.6;
-    margin: 0;
-    flex-grow: 1;
-  }
-  
-  /* Optional subtle divider under title */
-  .article-card h3::after {
-    content: "";
-    display: block;
+
+  .article-card .icon {
+    font-size: 2rem;
     width: 50px;
-    height: 3px;
-    background: linear-gradient(to right, #667eea, #764ba2);
-    border-radius: 2px;
-    margin-top: 8px;
+    height: 50px;
   }
-  
-  /* ---------------------------------------------------------------------- */
-  /* ANIMATION */
-  /* ---------------------------------------------------------------------- */
-  
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(10px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+
+  .article-card h3 {
+    font-size: 1.2rem;
   }
-  
-  /* ---------------------------------------------------------------------- */
-  /* RESPONSIVE DESIGN */
-  /* ---------------------------------------------------------------------- */
-  
-  @media (max-width: 768px) {
-    .article-card {
-      padding: 20px;
-      border-radius: 15px;
-    }
-  
-    .article-card .icon {
-      font-size: 2rem;
-      width: 50px;
-      height: 50px;
-    }
-  
-    .article-card h3 {
-      font-size: 1.2rem;
-    }
-  
-    .article-card p {
-      font-size: 0.95rem;
-    }
+
+  .article-card p {
+    font-size: 0.95rem;
   }
-  
+}
