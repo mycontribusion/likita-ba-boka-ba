@@ -63,7 +63,7 @@
 
 .share-btn-premium {
     background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary, #4a90e2));
-    color: white;
+    color: #4a90e2;
     border: none;
     padding: 6px 16px;
     border-radius: 8px;
@@ -74,7 +74,7 @@
     align-items: center;
     gap: 8px;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(167, 21, 21, 0.1);
 }
 
 .share-btn-premium:hover {

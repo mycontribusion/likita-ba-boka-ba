@@ -46,7 +46,7 @@ const FullArticleView = ({ article, onBack, onNavigate, hasNext, hasPrev }) => {
             if (navigator.share) {
               navigator.share({
                 title: article.title,
-                text: `Duba wannan labarin akan Likita Ba Boka: ${article.title}`,
+                text: `Duba wannan labarin akan Likita Ba Boka Ba: ${article.title}`,
                 url: window.location.href,
               }).catch((err) => console.log('Error sharing:', err));
             } else {

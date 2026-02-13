@@ -39,7 +39,7 @@ const CategoryPage = () => {
       <ArticleSection
         articles={filteredArticles}
         onSelectArticle={handleSelectArticle}
-        showExcerpt={false}
+        showExcerpt={true}
       />
 
       {filteredArticles.length === 0 && (
