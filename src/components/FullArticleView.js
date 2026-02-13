@@ -43,14 +43,21 @@ const FullArticleView = ({ article, onBack, onNavigate, hasNext, hasPrev }) => {
         <button
           className="share-btn-premium"
           onClick={() => {
+            const excerpt = (article.fullContent || "")
+              .replace(/[#*]/g, '') // remove markdown artifacts
+              .slice(0, 100)
+              .trim() + "...";
+
+            const shareText = `Duba wannan labarin akan Likita Ba Boka Ba: ${article.title}\n\n"${excerpt}"`;
+
             if (navigator.share) {
               navigator.share({
                 title: article.title,
-                text: `Duba wannan labarin akan Likita Ba Boka Ba: ${article.title}`,
+                text: shareText,
                 url: window.location.href,
               }).catch((err) => console.log('Error sharing:', err));
             } else {
-              navigator.clipboard.writeText(window.location.href);
+              navigator.clipboard.writeText(`${shareText}\n${window.location.href}`);
               const btn = document.querySelector('.share-btn-premium');
               const originalText = btn.innerHTML;
               btn.innerHTML = '✅ An Kwafo!';
