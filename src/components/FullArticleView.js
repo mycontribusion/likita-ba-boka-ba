@@ -40,6 +40,31 @@ const FullArticleView = ({ article, onBack, onNavigate, hasNext, hasPrev }) => {
               })}
           </span>
         )}
+        <button
+          className="share-btn-premium"
+          onClick={() => {
+            if (navigator.share) {
+              navigator.share({
+                title: article.title,
+                text: `Duba wannan labarin akan Likita Ba Boka: ${article.title}`,
+                url: window.location.href,
+              }).catch((err) => console.log('Error sharing:', err));
+            } else {
+              navigator.clipboard.writeText(window.location.href);
+              const btn = document.querySelector('.share-btn-premium');
+              const originalText = btn.innerHTML;
+              btn.innerHTML = '✅ An Kwafo!';
+              btn.classList.add('copied');
+              setTimeout(() => {
+                btn.innerHTML = originalText;
+                btn.classList.remove('copied');
+              }, 2000);
+            }
+          }}
+          title="Raba wannan labarin"
+        >
+          <span>📤 Raba Labarin</span>
+        </button>
       </div>
 
       <hr className="article-divider" />
