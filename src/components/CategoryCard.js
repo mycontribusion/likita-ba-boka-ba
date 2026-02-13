@@ -8,6 +8,7 @@ const CategoryCard = ({ category }) => {
       <div className="category-card">
         <div className="category-icon">{category.icon}</div>
         <div className="category-title">{category.name}</div>
+        <div className="category-description">{category.description}</div>
         <div className="category-count">{category.count} Labarai</div>
       </div>
     </Link>

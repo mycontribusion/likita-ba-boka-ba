@@ -21,7 +21,14 @@
   font-size: 1.3rem;
   font-weight: 600;
   color: var(--text-primary);
-  margin-bottom: 6px;
+  margin-bottom: 8px;
+}
+
+.category-description {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  margin-bottom: 15px;
+  line-height: 1.5;
 }
 
 .category-count {
