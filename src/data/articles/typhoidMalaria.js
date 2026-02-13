@@ -15,9 +15,9 @@ const typhoidMalaria = {
 
   To ai Hassan da Hussaini ma ba 'yan biyu bane, wa da kani ne.
 
-  Bara kuji cewa "Malaria ta kama ni" dai-dai take da cewa "sauraye sun cije ni"
+  Bara kuji, cewa "Malaria ta kama ni" dai-dai take da cewa "sauraye sun cije ni"
 
-  Cewa kuma Typhoid ta kama ni" dai-dai take da cewa "na ci kashin wani." Kashi na bandaki (toilet), ba 'kashi' (bone) ba.
+  Cewa kuma "Typhoid ya kama ni" dai-dai take da cewa "na ci kashin wani." Kashi na bandaki (toilet), ba 'kashi' (bone) ba.
   
   Bugu da kari, yayin da Malaria ke fasa kwayoyin halittar da ke cikin jini, Typhoid kuwa 'ya'yan hanji yake fasawa.
   
