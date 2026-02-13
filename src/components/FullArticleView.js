@@ -45,10 +45,10 @@ const FullArticleView = ({ article, onBack, onNavigate, hasNext, hasPrev }) => {
           onClick={() => {
             const excerpt = (article.fullContent || "")
               .replace(/[#*]/g, '') // remove markdown artifacts
-              .slice(0, 100)
+              .slice(0, 150)
               .trim() + "...";
 
-            const shareText = `Duba wannan labarin akan Likita Ba Boka Ba: ${article.title}\n\n"${excerpt}"`;
+            const shareText = `Karanta: ${article.title}\n\n"${excerpt}"`;
 
             if (navigator.share) {
               navigator.share({
