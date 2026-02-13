@@ -103,7 +103,7 @@ const FullArticleView = ({ article, onBack, onNavigate, hasNext, hasPrev }) => {
             className="nav-btn prev-btn"
             onClick={() => onNavigate('prev')}
           >
-            ← Labari Na Baya
+            ← Baya
           </button>
         )}
         {hasNext && (
@@ -111,7 +111,7 @@ const FullArticleView = ({ article, onBack, onNavigate, hasNext, hasPrev }) => {
             className="nav-btn next-btn"
             onClick={() => onNavigate('next')}
           >
-            Labari Na Gaba →
+            Gaba →
           </button>
         )}
       </div>

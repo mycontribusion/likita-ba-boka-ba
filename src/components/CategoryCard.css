@@ -1,15 +1,17 @@
 .category-card {
   background: var(--card-bg);
-  border-radius: 15px;
-  box-shadow: var(--shadow);
-  padding: 25px;
+  border-radius: 20px;
+  box-shadow: var(--card-shadow);
+  padding: 35px 25px;
   text-align: center;
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(0, 0, 0, 0.02);
 }
 
 .category-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  transform: translateY(-8px);
+  box-shadow: var(--card-shadow-hover);
+  border-color: rgba(59, 130, 246, 0.1);
 }
 
 .category-icon {

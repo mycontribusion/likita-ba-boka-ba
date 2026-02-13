@@ -5,19 +5,21 @@
 .article-card {
   background: var(--card-bg);
   border-radius: 20px;
-  box-shadow: var(--shadow);
-  padding: 25px 30px;
-  transition: all 0.3s ease;
+  box-shadow: var(--card-shadow);
+  padding: 30px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   text-align: left;
   cursor: pointer;
   display: flex;
   flex-direction: column;
   animation: fadeIn 0.4s ease-in-out;
+  border: 1px solid rgba(0, 0, 0, 0.02);
 }
 
 .article-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+  box-shadow: var(--card-shadow-hover);
+  border-color: rgba(59, 130, 246, 0.1);
 }
 
 /* ---------------------------------------------------------------------- */
